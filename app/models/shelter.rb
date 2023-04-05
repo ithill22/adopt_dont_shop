@@ -58,6 +58,6 @@ class Shelter < ApplicationRecord
   end
 
   def average_pet_age
-    pets.average(:age)
+    pets.average(:age).round(2)
   end
 end

@@ -49,4 +49,14 @@ RSpec.describe Application, type: :model do
       expect(application_1.eligible?).to eq(true)
     end
   end
+
+  describe 'instance methods' do
+    it "#update_status" do
+      expect(application_1.status).to eq("In Progress")
+
+      application_1.update_status({approve_all: true})
+      
+      expect(application_1.status).to eq("Approved")
+    end
+  end
 end
