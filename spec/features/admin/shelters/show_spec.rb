@@ -8,6 +8,7 @@ RSpec.describe 'admin shelters show', type: :feature do
   let!(:pet_1) { Pet.create!(adoptable: true, age: 1, breed: 'sphynx', name: 'Lucille Bald', shelter_id: shelter_1.id) }
   let!(:pet_2) { Pet.create!(adoptable: true, age: 3, breed: 'doberman', name: 'Lobster', shelter_id: shelter_1.id) }
   let!(:pet_3) { Pet.create!(adoptable: false, age: 2, breed: 'shorthair', name: 'Clawdia', shelter_id: shelter_1.id) }
+  let!(:pet_4) { Pet.create!(adoptable: true, age: 1, breed: 'sphynx', name: 'Lucille Bald', shelter_id: shelter_2.id) }
 
   describe 'As a visitor, when I visit the admin shelter show page' do
     it 'I see the shelters name and city' do
